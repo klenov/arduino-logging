@@ -1,0 +1,15 @@
+{
+    "name": "ArduinoLogging",
+    "keywords": "logging, serial, printf, debugging",
+    "description": "Easy to use logging library with loglevels.",
+    "repository":
+    {
+        "type": "git",
+        "url": "https://github.com/klenov/arduino_logging"
+    },
+    "frameworks": "arduino",
+    "platforms": [
+        "atmelavr",
+        "teensy"
+    ]
+}
