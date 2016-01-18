@@ -1,19 +1,12 @@
 #include "Logging.h"
 
-void Logging::Init(int level, long baud){
-    _level = constrain(level,LOG_LEVEL_NOOUTPUT,LOG_LEVEL_VERBOSE);
-    _baud = baud;
-    _printer = &Serial;
-    Serial.begin(_baud);
-}
-
 void Logging::Init(int level, Print* printer){
     _level = constrain(level,LOG_LEVEL_NOOUTPUT,LOG_LEVEL_VERBOSE);
     _printer = printer;
 }
 
 void Logging::Error(const char* msg, ...){
-    if (LOG_LEVEL_ERRORS <= _level) {   
+    if (LOG_LEVEL_ERRORS <= _level) {
         _printer->print("ERROR: ");
         va_list args;
         va_start(args, msg);
@@ -121,13 +114,5 @@ void Logging::print(const char *format, va_list args) {
         _printer->print(*format);
     }
 }
- 
+
 Logging Log = Logging();
-
- 
- 
-  
-
-
-
-

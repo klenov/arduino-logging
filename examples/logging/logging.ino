@@ -17,7 +17,8 @@ bool myBool1, myBool2;
 char* myString = "this is a string";
 
 void setup() {
-    Log.Init(LOGLEVEL, 38400L);
+    Serial.begin(9600);
+    Log.Init(LOGLEVEL, &Serial);
     Log.Info(CR"******************************************"CR);
     Log.Info("My favorite output stuff in future :-)"CR);
     Log.Info("******************************************"CR);
