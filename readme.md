@@ -2,6 +2,8 @@
 Arduino Logging
 ======
 
+This library is deprecated. Consider using https://github.com/klenov/advancedSerial
+
 Easy to use logging library, like log4j or log4net. After getting a logger object, you will have
 methods like Error, Info, Warn, Debug, Verbose to log informations over RS232.
 Depending on the current loglevel lower logleves are not printed out.
